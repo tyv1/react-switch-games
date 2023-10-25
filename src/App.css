@@ -1,3 +1,11 @@
+:root{
+  --rich-black:#0D1821;
+  --indigo-dye:#344966;
+  --powder-blue:#B4CDED;
+  --baby-powder:#F0F4EF;
+  --sage:#BFCC94;
+}
+
 .App {
   text-align: center;
 }
