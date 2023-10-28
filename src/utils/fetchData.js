@@ -6,8 +6,7 @@ async function fetchData() {
     if (!result.ok) {
       throw new Error(`HTTP error! Status: ${result.status}`)
     }
-    const data = await result.json();
-    return data;
+    return result;
   } catch (error) {
     console.error('Error:', error)
   }
