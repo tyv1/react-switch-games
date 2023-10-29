@@ -22,16 +22,21 @@ function GamesGrid() {
 
     return (
       <div className={styles.wrapper}>
-        <div className={styles.card}>
-          Card!
-        </div>
-        <div>
-          {data ? (
-            <pre>{JSON.stringify(data, null, 1)}</pre>
-          ) : (
-          <CircularProgress />
-          )}
-        </div>
+        {data ? (
+          data.map((game, index) => (
+            <div key={index} className={styles.card}>
+              <h3>
+                {game.name}
+              </h3>
+              <p>
+                Genre: {game.genre}
+                Developed by: {game.developers}
+              </p>
+            </div>
+          ))
+        ) : (
+        <CircularProgress />
+        )}
       </div>
     );
 }

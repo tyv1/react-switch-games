@@ -1,7 +1,18 @@
 .wrapper{
-    display: grid;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
 }
 
 .card {
-    padding: 5px
+    height: 300px;
+    width: 300px;
+    padding: 5px;
+    background-color: var(--indigo-dye);
+    border-radius: 10px;
+    border: 2px solid var(--baby-powder);
+    box-shadow: 5px 5px 5px var(--prussian-blue);
 }
