@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import fetchData from "../utils/fetchData";
+import { CircularProgress } from "@mui/material";
+import styles from './GamesGrid.module.css';
 
 function GamesGrid() {
-    const [data, setData] = useState([]);
+    const [data, setData] = useState(null);
 
     useEffect(() => {
         async function fetchGameData() {
@@ -19,9 +21,18 @@ function GamesGrid() {
       }, []);
 
     return (
-        <div>
-            <pre>{JSON.stringify(data, null, 2)}</pre>
+      <div className={styles.wrapper}>
+        <div className={styles.card}>
+          Card!
         </div>
+        <div>
+          {data ? (
+            <pre>{JSON.stringify(data, null, 1)}</pre>
+          ) : (
+          <CircularProgress />
+          )}
+        </div>
+      </div>
     );
 }
 
