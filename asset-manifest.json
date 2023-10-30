@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-switch-games/static/css/main.c60e1727.css",
+    "main.js": "/react-switch-games/static/js/main.2d656fd3.js",
+    "static/js/787.596ba623.chunk.js": "/react-switch-games/static/js/787.596ba623.chunk.js",
+    "index.html": "/react-switch-games/index.html",
+    "main.c60e1727.css.map": "/react-switch-games/static/css/main.c60e1727.css.map",
+    "main.2d656fd3.js.map": "/react-switch-games/static/js/main.2d656fd3.js.map",
+    "787.596ba623.chunk.js.map": "/react-switch-games/static/js/787.596ba623.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c60e1727.css",
+    "static/js/main.2d656fd3.js"
+  ]
+}
