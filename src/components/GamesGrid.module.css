@@ -1,18 +1,28 @@
 .wrapper{
     height: 100%;
-    width: 100%;
-
+    margin: 50px;
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
 }
 
 .card {
-    height: 300px;
-    width: 300px;
-    padding: 5px;
     background-color: var(--indigo-dye);
-    border-radius: 10px;
     border: 2px solid var(--baby-powder);
     box-shadow: 5px 5px 5px var(--prussian-blue);
+    height: 500px;
+    width: 400px;
+    padding: 5px;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+
+}
+
+p {
+    display: flex;
+    flex-flow: column;
+    justify-content:center;
+    overflow: auto;
+    margin: 15px;
 }

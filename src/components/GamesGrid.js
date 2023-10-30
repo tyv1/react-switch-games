@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import fetchData from "../utils/fetchData";
-import { CircularProgress } from "@mui/material";
+import { CircularProgress, Divider } from "@mui/material";
 import styles from './GamesGrid.module.css';
 
-function GamesGrid() {
+function GamesGrid({showMore}) {
     const [data, setData] = useState(null);
 
     useEffect(() => {
@@ -20,17 +20,23 @@ function GamesGrid() {
         fetchGameData(); 
       }, []);
 
+    const dataToShow = showMore ? data : (data ? data.slice(0, 10) : []);
+
     return (
       <div className={styles.wrapper}>
-        {data ? (
-          data.map((game, index) => (
+        {dataToShow ? (
+          dataToShow.map((game, index) => (
             <div key={index} className={styles.card}>
               <h3>
                 {game.name}
               </h3>
+              <Divider variant="middle" sx={{ bgcolor: "#B4CDED" }}/>
               <p>
-                Genre: {game.genre}
-                Developed by: {game.developers}
+                <bold>Genre:</bold> {game.genre}
+              </p>
+              <Divider light variant="middle" sx={{ bgcolor: "#B4CDED", opacity: "25%", width: "50%", alignSelf: "center"}}/>
+              <p>
+                <bold>Developed by:</bold> {game.developers}
               </p>
             </div>
           ))
